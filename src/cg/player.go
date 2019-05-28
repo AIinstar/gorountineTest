@@ -23,6 +23,13 @@ type Player struct {
 	mq chan *Message //等待收取消息
 }
 
+type Room struct {
+	Name string "name"
+	Level int  "level"
+}
+
+
+
 func NewPlayer() *Player {
 	m := make(chan *Message, 1024)
 	player := &Player{"",0,0,0, m}

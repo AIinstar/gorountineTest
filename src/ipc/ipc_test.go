@@ -6,8 +6,8 @@ type EchoServer struct {
 
 }
 
-func (server *EchoServer) Handle(request, params string) string {
-	return "ECHO:" + request
+func (server *EchoServer) Handle(request, params string) *Response {
+	return &Response{Code:"200"}
 }
 
 func (server *EchoServer) Name() string {

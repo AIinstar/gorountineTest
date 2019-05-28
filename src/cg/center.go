@@ -95,7 +95,9 @@ func (server *CenterServer) broadcast(params string) error {
 	}
 	return err
 }
-
+func (server *CenterServer) Name()string{
+	return "CenterServer"
+}
 func (server *CenterServer) Handle(method, params string) *ipc.Response {
 	switch method {
 	case "addplyer":
